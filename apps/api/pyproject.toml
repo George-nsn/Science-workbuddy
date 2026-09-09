@@ -1,0 +1,81 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "science-buddy-api"
+version = "0.1.0"
+description = "Traceable biomedical literature research assistant API"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "alembic>=1.14,<2",
+  "aiosqlite>=0.21,<1",
+  "arq>=0.26,<1",
+  "cryptography>=46,<47",
+  "fastapi>=0.115,<1",
+  "github-copilot-sdk>=0.1,<2",
+  "httpx>=0.28,<1",
+  "matplotlib>=3.10,<4",
+  "networkx>=3.4,<4",
+  "numpy>=2,<3",
+  "pillow>=11,<13",
+  "pymupdf>=1.25,<2",
+  "pydantic-settings>=2.7,<3",
+  "python-multipart>=0.0.20,<1",
+  "python-docx>=1.2,<2",
+  "redis>=5.2,<7",
+  "sqlalchemy[asyncio]>=2.0.36,<3",
+  "uvicorn[standard]>=0.34,<1"
+]
+
+[project.scripts]
+science-buddy-eval = "science_buddy.evaluation:main"
+
+[project.optional-dependencies]
+dev = [
+  "mypy>=1.14,<2",
+  "pytest>=8.3,<9",
+  "pytest-asyncio>=0.25,<1",
+  "ruff>=0.9,<1",
+  "types-networkx>=3.4,<4"
+]
+rag = [
+  "sentence-transformers>=5,<6"
+]
+rerank = [
+  "sentence-transformers>=5,<6"
+]
+docling = [
+  "docling>=2,<3"
+]
+ocr = [
+  "onnxruntime>=1.22,<2",
+  "rapidocr>=3.9,<4"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/science_buddy"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "ASYNC"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+plugins = ["pydantic.mypy"]
+packages = ["science_buddy"]
+
+[[tool.mypy.overrides]]
+module = ["arq.*"]
+ignore_missing_imports = true

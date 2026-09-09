@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PubmedArticleSet>
+  <PubmedArticle>
+    <MedlineCitation Status="MEDLINE" Owner="NLM">
+      <PMID Version="1">12345678</PMID>
+      <Article>
+        <Journal>
+          <JournalIssue CitedMedium="Internet">
+            <PubDate><Year>2025</Year><Month>Mar</Month><Day>12</Day></PubDate>
+          </JournalIssue>
+          <Title>Journal of Traceable Research</Title>
+        </Journal>
+        <ArticleTitle>BRAF V600E and outcomes in papillary thyroid carcinoma</ArticleTitle>
+        <Abstract>
+          <AbstractText Label="BACKGROUND">BRAF V600E is frequently observed in papillary thyroid carcinoma.</AbstractText>
+          <AbstractText Label="RESULTS">The association varied across patient subgroups.</AbstractText>
+        </Abstract>
+        <AuthorList>
+          <Author><LastName>Li</LastName><ForeName>Ming</ForeName></Author>
+          <Author><CollectiveName>Traceable Evidence Group</CollectiveName></Author>
+        </AuthorList>
+        <PublicationTypeList>
+          <PublicationType UI="D016428">Journal Article</PublicationType>
+        </PublicationTypeList>
+      </Article>
+      <MeshHeadingList>
+        <MeshHeading><DescriptorName UI="D013964" MajorTopicYN="Y">Thyroid Neoplasms</DescriptorName></MeshHeading>
+      </MeshHeadingList>
+    </MedlineCitation>
+    <PubmedData>
+      <ArticleIdList>
+        <ArticleId IdType="pubmed">12345678</ArticleId>
+        <ArticleId IdType="doi">10.1000/TRACE.001</ArticleId>
+        <ArticleId IdType="pmc">PMC1234567</ArticleId>
+      </ArticleIdList>
+    </PubmedData>
+  </PubmedArticle>
+</PubmedArticleSet>

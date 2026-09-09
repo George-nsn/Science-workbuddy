@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "launcherVersion": "v1",
+  "urls": {
+    "web": "http://127.0.0.1:3000",
+    "apiLive": "http://127.0.0.1:8000/api/v1/health/live",
+    "apiReady": "http://127.0.0.1:8000/api/v1/health/ready"
+  },
+  "ports": {
+    "web": 3000,
+    "api": 8000
+  },
+  "timeoutsSeconds": {
+    "migration": 180,
+    "api": 90,
+    "web": 120,
+    "stop": 15
+  },
+  "services": {
+    "workerDefault": false,
+    "redisMode": "optional"
+  },
+  "commands": {
+    "migration": ["-m", "alembic", "upgrade", "head"],
+    "api": ["-m", "uvicorn", "science_buddy.main:app", "--host", "127.0.0.1", "--port", "8000"],
+    "worker": ["-m", "arq", "science_buddy.worker.WorkerSettings"]
+  }
+}

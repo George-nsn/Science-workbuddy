@@ -1,0 +1,38 @@
+# Environment and secrets
+.env
+.env.local
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Node
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+npm-debug.log*
+
+# Runtime data
+/data/*
+!/data/.gitkeep
+/logs/
+.runtime/
+
+# Staging area for one-off scripts, test residue, and regenerable artifacts
+/temp/
+
+# Editors and OS
+.DS_Store
+Thumbs.db
+.vscode/*.local.json
