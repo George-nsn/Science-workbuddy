@@ -1,6 +1,7 @@
 # Science Buddy
 
 Science Buddy is a local-first, privacy-preserving research assistant and workbench for universal academic and scientific literature. It uses SQLite (WAL mode) for durable literature/vector/graph/memory storage, Redis for optional cross-process cache and asynchronous jobs, and deterministic contracts for cryptographically traceable RAG workflows across natural sciences, computing & AI, engineering, physical sciences, and interdisciplinary research.
+![Uploading image.png…]()
 
 > Academic and research assistance only. It is not intended to replace professional peer review, domain experts, statisticians, or formal laboratory/computational standard operating procedures (SOPs).
 
